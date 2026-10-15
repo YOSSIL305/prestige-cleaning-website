@@ -2,45 +2,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prestige Cleaning Service, LLC</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
-      text-align: center;
-    }
-    header {
-      padding: 24px;
-      background: #f47721;
-      color: #111;
-      font-weight: bold;
-    }
-    main { padding: 90px 20px; }
-    h1 { font-size: clamp(32px, 6vw, 60px); }
-    span { color: #ff812e; }
-    a {
-      display: inline-block;
-      background: #ff812e;
-      color: #111;
-      padding: 16px 28px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Prestige Cleaning Service, LLC offers professional office, commercial and vacation rental cleaning in Maryland. Insured and bonded.">
+<title>Prestige Cleaning Service, LLC</title>
+
+<style>
+:root {
+  --orange: #f47721;
+  --dark: #141414;
+  --white: #ffffff;
+  --gray: #f5f5f5;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+a { text-decoration: none; }
+.container {
+  width: min(1150px, 92%);
+  margin: auto;
+}
+.btn {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  padding: 14px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+.btn:hover { background: #d95c0b; }
+
+/* HEADER */
+header {
+  background: var(--dark);
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+}
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.logo span { color: var(--orange); }
+nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+nav a:hover { color: var(--orange); }
+
+/* HERO */
+.hero {
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,.88),
+      rgba(0,0,0,.28)),
+    url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+.hero-content { max-width: 720px; }
+.hero h1 {
+  font-size: clamp(38px, 5.5vw, 68px);
+  line-height: 1.12;
+  margin: 0 0 20px;
+}
+.hero h1 span { color: var(--orange); }
+.hero p {
+  font-size: 19px;
+  margin-bottom: 30px;
+  max-width: 590px;
+}
+
+/* TRUST */
+.trust {
+  background: var(--orange);
+  color: white;
+  padding: 24px 0;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+section { scroll-margin-top: 20px; }
+.section { padding: 85px 0; }
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.section-title h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 0 0 10px;
+}
+.section-title p { color: #666; }
+.accent { color: var(--orange); }
+
+/* SERVICES */
+.services { background: var(--gray); }
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+.service-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 22px rgba(0,0,0,.07);
+}
+.service-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+.service-body { padding: 26px; }
+.service-body h3 {
+  margin: 0 0 12px;
+  font-size: 23px;
+}
+.service-body p { color: #666; }
+.service-body a {
+  color: #d65d0d;
+  font-weight: bold;
+}
+
+/* ABOUT */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+.about-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+.about-grid h2 {
+  font-size: 36px;
+  line-height: 1.2;
+}
+.about-grid p { color: #555; }
+
+/* CONTACT */
+.contact {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+}
+.contact p { color: #ddd; }
+.contact a.email {
+  color: #ff9a52;
+  overflow-wrap: anywhere;
+}
+
+/* FOOTER */
+footer {
+  background: #0c0c0c;
+  color: #aaa;
+  text-align: center;
+  padding: 26px 15px;
+  font-size: 13px;
+}
+
+@media(max-width: 850px) {
+  .nav { flex-direction: column; }
+  nav { justify-content: center; }
+  .trust-grid { grid-template-columns: repeat(2,1fr); }
+  .service-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .hero { min-height: 510px; }
+}
+@media(max-width: 480px) {
+  nav { gap: 12px; }
+  nav a { font-size: 12px; }
+  .trust-grid { gap: 15px; }
+  .section { padding: 60px 0; }
+}
+</style>
 </head>
+
 <body>
-  <header>PRESTIGE CLEANING SERVICE, LLC</header>
-  <main>
-    <h1>Experience the <span>Prestige</span> Difference</h1>
-    <p>Professional Cleaning Services in Maryland</p>
-    <a href="mailto:prestigecleanservllc@gmail.com">
-      Request a Quote
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">
+      PRESTIGE <span>CLEANING</span>
     </a>
-  </main>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#office">Office Cleaning</a>
+      <a href="#commercial">Commercial</a>
+      <a href="#rentals">Airbnb & Rentals</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#contact">Request a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <h1>
+        Experience the
+        <span>Prestige</span>
+        Difference.
+      </h1>
+      <p>
+        Professional cleaning services for offices,
+        commercial properties, and vacation rentals.
+        Reliable service. Exceptional attention to detail.
+      </p>
+      <a class="btn" href="#contact">
+        REQUEST A FREE QUOTE
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="container trust-grid">
+    <div>✓ Insured & Bonded</div>
+    <div>✓ Reliable & Professional</div>
+    <div>✓ Eco-Friendly Options</div>
+    <div>✓ Flexible Scheduling</div>
+  </div>
+</div>
+
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our <span class="accent">Cleaning Services</span></h2>
+      <p>Professional solutions tailored to your property.</p>
+    </div>
+
+    <div class="service-grid">
+
+      <article class="service-card" id="office">
+        <img
+          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80"
+          alt="Modern office interior"
+          loading="lazy">
+        <div class="service-body">
+          <h3>Office Cleaning</h3>
+          <p>
+            A clean and organized workplace creates
+            a better environment for your team.
+            We help keep your office ready for business.
+          </p>
+          <a href="#contact">Learn More →</a>
+        </div>
+      </article>
+
+      <article class="service-card" id="commercial">
+        <img
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+          alt="Professional commercial interior"
+          loading="lazy">
+        <div class="service-body">
+          <h3>Commercial Cleaning</h3>
+          <p>
+            Dependable cleaning solutions for commercial
+            facilities and businesses of different sizes.
+          </p>
+          <a href="#contact">Learn More →</a>
+        </div>
+      </article>
+
+      <article class="service-card" id="rentals">
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+          alt="Beautiful vacation rental interior"
+          loading="lazy">
+        <div class="service-body">
+          <h3>Airbnb & Rentals</h3>
+          <p>
+            Detailed turnover cleaning to help prepare
+            your vacation rental for the next guests.
+          </p>
+          <a href="#contact">Learn More →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div>
+      <h2>
+        More Than Cleaning.
+        <span class="accent">It's Prestige.</span>
+      </h2>
+      <p>
+        Founded in 2019, Prestige Cleaning Service, LLC
+        is committed to providing dependable,
+        professional cleaning services.
+      </p>
+      <p>
+        We are insured and bonded, with experience
+        serving commercial properties, local offices,
+        and vacation rentals in the Ocean City area.
+      </p>
+      <a class="btn" href="#contact">
+        WORK WITH US
+      </a>
+    </div>
+    <img
+      src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85"
+      alt="Professional cleaning service"
+      loading="lazy">
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+    <h2>Ready for a <span class="accent">Cleaner Space?</span></h2>
+    <p>
+      Tell us about your property and cleaning needs.
+      We would love to prepare a quote for you.
+    </p>
+    <p>
+      <a class="email"
+        href="mailto:prestigecleanservllc@gmail.com">
+        prestigecleanservllc@gmail.com
+      </a>
+    </p>
+    <a class="btn"
+      href="mailto:prestigecleanservllc@gmail.com?subject=Cleaning%20Service%20Quote%20Request">
+      REQUEST A QUOTE
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © 2026 Prestige Cleaning Service, LLC.
+  All Rights Reserved.
+</footer>
+
 </body>
 </html>
